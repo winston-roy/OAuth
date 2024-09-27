@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <title>Homepage</title>
     <style>
         body {
             font-family: arial;
@@ -44,6 +43,17 @@
             padding: 0 10px;
             color: #333;
         }
+
+        main img {
+            width: 40px;
+            margin-right: 10px;
+            position: relative;
+            top: 12px;
+        }
+
+        main p {
+            display: inline-block;
+        }
     </style>
 </head>
 
@@ -60,11 +70,15 @@
         </ul>
     </nav>
     <header>
-        <h1>Net Ninja OAuth Tut's</h1>
-        <h2>Homepage</h2>
+        <h1>Welcome to your profile, <%= user.username %>
+        </h1>
+        <main>
+            <img src="<%= user.thumbnail %>" />
+            <p>This is your profile thumbnail</p>
+        </main>
     </header>
     <main>
-        <p>Probably the best OAuth tutorials on the planet </p>
+
     </main>
 </body>
 

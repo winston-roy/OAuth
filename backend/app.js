@@ -7,6 +7,7 @@ const cookieSession = require('cookie-session');
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
 const passport = require('passport');
+const profileRoutes = require('./routes/profile-routes');
 
 const app = express();
 
@@ -33,10 +34,12 @@ mongoose.connect(keys.mongodb.dbURI)
     });
 
 app.use('/auth', authRoutes)
+app.use('/profile', profileRoutes);
+
 
 
 app.get('/', (req, res) => {
-    res.render('home')
+    res.render('home', { user: req.user })
 })
 
 app.listen(3000, () => {
