@@ -6,6 +6,10 @@ module.exports = {
         clientSecret: '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'
     },
     mongodb: {
-        dbURI: 'mongodb://localhost:27017/code-step-by-step'
+        dbURI: 'mongodb://127.0.0.1:27017/oAuth'
+        //dbURI:' mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.1'
+    },
+    session: {
+        cookieKey: 'thenetninjaisawesomeiguess'
     }
 };
